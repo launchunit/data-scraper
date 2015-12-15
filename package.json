@@ -1,0 +1,11 @@
+{
+  "name": "data-scraper",
+  "main": "index.js",
+  "author": "Karan Sakhuja <kevin.sakhuja@gmail.com> (http://kevify.com)",
+  "dependencies": {
+    "async": "^1.5.0",
+    "got": "^5.2.1",
+    "lodash": "^3.10.1",
+    "log-update": "^1.0.2"
+  }
+}
