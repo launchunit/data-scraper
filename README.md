@@ -6,6 +6,7 @@
 Promise.resolve()
 .then(() => {
   return require('./lib').getJson({
+    requestType: 'html' || 'json',
     seedData: {
       url: 'https://www.exmaple.com/',
       meta: 'directory'
