@@ -35,3 +35,4 @@ dist/*
 config/*
 _dist/*
 output/*
+vendors/*
