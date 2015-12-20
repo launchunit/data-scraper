@@ -12,6 +12,7 @@
  * @param opts.headers {Object} - GET request headers
  * @param opts.query {Object} - GET request query
  * @param opts.concurrency (Optional) Default = 10
+ * @param opts.method (Optional) Default = GET
  **/
 Promise.resolve()
 .then(() => {
