@@ -11,5 +11,6 @@
  * @param opts.query {Object} - GET request query
  * @param opts.concurrency (Optional) Default = 10
  * @param opts.method (Optional) Default = GET
+ * @param opts.body (Optional)
  **/
  exports.getData = require('./lib/get');
