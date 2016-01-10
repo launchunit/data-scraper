@@ -9,7 +9,7 @@
  * @param opts.resultFn {Function} // Async
  * @param opts.nextSeedFn {Function}
  *        @return {Object|Array} [{url,query,meta}], // null can also be passed
- * @param opts.agent {Object} (Optional)
+ * @param opts.proxy {Object} (Optional)
  * @param opts.headers {Object} - GET request headers
  * @param opts.query {Object} - GET request query
  * @param opts.concurrency (Optional) Default = 10
