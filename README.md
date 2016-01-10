@@ -42,29 +42,4 @@ Promise.resolve()
 .catch(err => {
   console.error(err);
 });
-
-
-/**
- * GET_URL
- *
- * @param opts.url {String}
- * @param opts.agent {Object} (Optional)
- * @param opts.headers {Object} - GET request headers
- * @param opts.query {Object} - GET request query
- * @param opts.method (Optional) Default = GET
- * @param opts.body (Optional)
- * @param opts.meta (Optional)
- **/
-Promise.resolve()
-.then(() => {
-  return require('./lib').getJson({
-    url: 'http://supermain.com/json'
-  })
-})
-.then(res => {
-  console.log(res);
-})
-.catch(err => {
-  console.error(err);
-});
 ```
