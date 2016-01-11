@@ -15,6 +15,7 @@
  * @param opts.concurrency (Optional) Default = 10
  * @param opts.method (Optional) Default = GET
  * @param opts.body (Optional)
+ * @param opts.form (Optional)
  * @param opts.wait (Optional) Default = 0ms
  **/
 Promise.resolve()
