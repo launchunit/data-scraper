@@ -58,8 +58,8 @@ request({
 /**
  * Using Scrapinghub Crawlera
  */
-const apiKey = 'Some_key';
-const crawleraProxy = require('./').crawlera(apiKey);
+const crawleraOpts = { apiKey: 'Some_key' };
+const crawleraProxy = require('./').crawlera(crawleraOpts);
 
 var R = request.defaults(crawleraProxy);
 

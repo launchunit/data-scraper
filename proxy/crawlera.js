@@ -7,13 +7,12 @@
  *
  * @public
  */
-function Proxy(apiKey) {
+function Proxy(opts) {
 
-  if (! apiKey)
-    throw new Error('apiKey is required.');
+  if (! opts.apiKey)
+    throw new Error('opts.apiKey is required.');
 
   return {
     proxy: `http://${apiKey}:@proxy.crawlera.com:8010`
   };
-
 };
