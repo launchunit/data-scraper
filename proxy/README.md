@@ -1,10 +1,5 @@
 # Proxy
 
-* A new proxy should be used for each request made using the [request module](https://github.com/request/request).
-
-* The proxy nodes are cleared and new nodes are generated based on the `switchEvery` option passed. By default, it will switch proxy node every 50 requests.
-
-
 #### Supported Providers
 1. [luminati.io](https://luminati.io/)
 2. [tor onion network](https://www.torproject.org/)
@@ -19,16 +14,21 @@ __Note:__ Feel free to ask for more providers.
 // Use Request module
 const request = require('request');
 
+
 /**
  * Using luminati.IO
+ *
+ * A new proxy.request() should be used for each request.
+ * The proxy nodes are cleared and new nodes are generated based on the `switchEvery` option passed
  */
-const opts = {
+
+const luminatiOpts = {
  user: 'USER_NAME',
  pass: 'PASSWORD',
  switchEvery: 100, // (Optional) Default = 50
 };
 
-const luminatiProxy = require('./').luminati(opts);
+const luminatiProxy = require('./').luminati(luminatiOpts);
 
 request({
   url: 'http://blah.com',
