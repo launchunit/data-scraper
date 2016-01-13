@@ -55,3 +55,5 @@ Proxy.prototype = {
     return this.lastProxy;
   }
 };
+
+module.exports = Proxy;

@@ -7,7 +7,7 @@
  *
  * @public
  */
-function Proxy(opts) {
+module.exports = opts => {
 
   if (! opts.apiKey)
     throw new Error('opts.apiKey is required.');

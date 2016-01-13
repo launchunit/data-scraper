@@ -8,7 +8,7 @@
  *
  * @public
  */
-function Proxy(opts) {
+module.exports = opts => {
 
   opts = Object.assign({
     socksHost: '127.0.0.1',
