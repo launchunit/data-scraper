@@ -31,10 +31,18 @@ function Proxy(opts) {
 
 Proxy.prototype = {
 
-  request: function(forceNewAgent) {
+  requestWrapper: function(forceNewIP) {
+
+    if (typeof forceNewIP === 'function') {
+      cb = forceNewIP;
+      forceNewIP = false;
+    }
+
+    cb = cb || function() {};
+
 
     // Force new proxy agent
-    if (forceNewAgent) {
+    if (forceNewIP) {
       this.lastProxy = undefined;
     }
 
@@ -42,7 +50,10 @@ Proxy.prototype = {
         this.count % this.switchEvery !== 0) {
 
       ++this.count;
-      return this.lastProxy;
+
+      return cb({
+        proxy: this.lastProxy
+      });
     }
 
     // Reset count for memory
@@ -52,8 +63,14 @@ Proxy.prototype = {
     const sessionId = Chance.hash({ length: 5 });
 
     this.lastProxy = `http://${self.user}-session-${sessionId}:${self.pass}@zproxy.luminati.io:22225`;
-    return this.lastProxy;
+
+    return cb({
+      proxy: this.lastProxy
+    });
   }
 };
 
-module.exports = Proxy;
+
+module.exports = opts => {
+  return new Proxy(opts);
+};
