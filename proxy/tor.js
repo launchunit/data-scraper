@@ -1,12 +1,12 @@
 
 'use strict';
 
-const TorControl = require('tor-control');
+const TorProxy = require('tor-proxy');
 
 
 module.exports = opts => {
 
-  cont t = TorControl(Object.assign({
+  const t = TorProxy(Object.assign({
     switchEvery: 50  // Overriding exiting 20 default
   }, opts));
 
