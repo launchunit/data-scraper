@@ -60,7 +60,7 @@ Proxy.prototype = {
     this.count = 1;
 
     // Generate a new random sessionId
-    const sessionId = Chance.hash({ length: 5 });
+    const sessionId = Chance.hash({ length: 8 });
 
     this.lastProxy = `http://${self.user}-session-${sessionId}:${self.pass}@zproxy.luminati.io:22225`;
 

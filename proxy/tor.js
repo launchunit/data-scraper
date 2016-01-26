@@ -1,7 +1,8 @@
 
 'use strict';
 
-const TorControl = require('tor-control');
+const util = require('util'),
+  TorControl = require('tor-control');
 
 
 /**
@@ -75,7 +76,7 @@ Proxy.prototype = {
           console.error(err);
         }
 
-        console.log(`Tor status IP: ${JSON.stringify(status)}`);
+        console.log(`Tor status IP: ${util.inspect(status, { depth: null })}`);
 
         // Reset count for memory
         this.count = 1;
